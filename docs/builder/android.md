@@ -10,7 +10,7 @@ You will need:
 * An android device or Android emulator for testing
 
 An Apple Developer account (which are available for a yearly subscription of $99)
-## Packaging your PWA with PWABuilder
+## Packaging
 
 The first step is to generate your Android package with PWABuilder.
 
@@ -32,40 +32,40 @@ The first step is to generate your Android package with PWABuilder.
 6. When you are ready, tap the Generate button to generate your Android app, and then the Download button when it pops up to download the generated App and associated files.
 
 ## Customize your Android package
-* Package ID: The Android identifier unique to your app
-* App name: The full name of your app. We prepopulate this with the app name from your PWA’s app manifest.
-* Launcher name: The name of your app in the Android launcher. This is typically the same as app name, or a shortened version of it. We prepopulate this with short_name from your PWA’s app manifest.
-* App version: This is the version string displayed to end users, e.g. “1.0.0.0”
-* App version code: This is an integer used as a private, internal version of your app.
-* Host, Start URL, Manifest URL: The URLs used to launch your PWA in the Android app. We prepopulate these for you from your app manifest.
-* Theme color: The theme color used for the Android status bar in your app. Typically, this should be set to your manifest's theme_color.
-* Background color: The background color to use for your app's splash screen. Typically this is set to your manifest's background_color.
-* Nav color: The background color to use for your app's splash screen. Typically this is set to your manifest's background_color.
-* Nav dark color: The color of the Android navigation bar in your app when the Android device is in dark mode.
-* Nav divider color: The color of the Android navigation bar divider in your app.
-* Nav divider dark color: The color of the Android navigation bar divider in your app when the Android device is in dark mode.
-* Icon URL: The URL to a square PNG image to use for your app's icon. Can be absolute or relative to your manifest. Google recommends a 512x512 PNG without shadows.
-* Maskable icon URL: Optional. The URL to a PNG image with a minimum safe zone of trimmable padding, enabling rounded icons on certain Android versions. Google recommends a 512x512 PNG without shadows.
-* Monochrome icon URL: Optional. The URL to a PNG image containing only white and black colors, enabling Android to fill the icon with user-specified color or gradient depending on theme, color mode, or Android ontrast settings.
-* Manifest URL: The absolute URL of your web manifest.
-* Splash fade out duration (ms): How long the splash screen fade out animation should last in milliseconds.
-* Fallback behavior:  When the full TWA experience isn’t available, how should your app proceed, whether with a web view or [Chrome’s Custom Tabs](https://developer.chrome.com/docs/android/custom-tabs/) feature. We default to the latter.
-* Display mode: 
+* **Package ID**: The Android identifier unique to your app
+* **App name**: The full name of your app. We prepopulate this with the app name from your PWA’s app manifest.
+* **Launcher name**: The name of your app in the Android launcher. This is typically the same as app name, or a shortened version of it. We prepopulate this with short_name from your PWA’s app manifest.
+* **App version**: This is the version string displayed to end users, e.g. “1.0.0.0”
+* **App version code**: This is an integer used as a private, internal version of your app.
+* **Host, Start URL, Manifest URL**: The URLs used to launch your PWA in the Android app. We prepopulate these for you from your app manifest.
+* **Theme color**: The theme color used for the Android status bar in your app. Typically, this should be set to your manifest's theme_color.
+* **Background color**: The background color to use for your app's splash screen. Typically this is set to your manifest's background_color.
+* **Nav color**: The background color to use for your app's splash screen. Typically this is set to your manifest's background_color.
+* **Nav dark color**: The color of the Android navigation bar in your app when the Android device is in dark mode.
+* **Nav divider color**: The color of the Android navigation bar divider in your app.
+* **Nav divider dark color**: The color of the Android navigation bar divider in your app when the Android device is in dark mode.
+* **Icon URL**: The URL to a square PNG image to use for your app's icon. Can be absolute or relative to your manifest. Google recommends a 512x512 PNG without shadows.
+* **Maskable icon URL**: Optional. The URL to a PNG image with a minimum safe zone of trimmable padding, enabling rounded icons on certain Android versions. Google recommends a 512x512 PNG without shadows.
+* **Monochrome icon URL**: Optional. The URL to a PNG image containing only white and black colors, enabling Android to fill the icon with user-specified color or gradient depending on theme, color mode, or Android ontrast settings.
+* **Manifest URL**: The absolute URL of your web manifest.
+* **Splash fade out duration (ms)**: How long the splash screen fade out animation should last in milliseconds.
+* **Fallback behavior**:  When the full TWA experience isn’t available, how should your app proceed, whether with a web view or [Chrome’s Custom Tabs](https://developer.chrome.com/docs/android/custom-tabs/) feature. We default to the latter.
+* **Display mode**: 
   - Standalone means your PWA takes up all the area except Android status bar and Navigation bar.
   - Fullscreen hide both bars. This is intended for immersive experiences likes games and media playback.
-* Notifications: If enabled, your PWA will use Android Notification Delegation for push notifications, meaning your installed PWA can send push notifications without browser permission prompts. You should enable this if your PWA sends push notifications.
-* Notification delegation: If enabled, your PWA can send push notifications without browser permission prompts.
-* Location delegation: If enabled, your PWA can access navigator.geolocation without browser permission prompts.
-* Google Play billing: If enabled, your PWA can sell in-app purchases and subscriptions via the Digital Goods API.
-* Settings shortcut: If enabled, users can long-press on your app tile and a Settings menu item will appear, letting users manage space for your app.
-* ChromeOS only: If enabled, your Android package will only run on ChromeOS devices.
-* Include source code: If enabled, your download will include the source code for your Android app.
-* Signing key: How the APK app package will be digitally signed:
- - None: your app package won’t be signed. Unsigned packages will be signed by the Google Play Store. This is Google’s recommendation, and our default.
- - New: PWABuilder will create a new signing key for you. The signing key will be included in your zip download. Choosing this will let you fill in details like password, alias, and more.
- -  Mine: Upload an existing .keystore file to use for signing the app package. This should be used if you are updating an existing app in the Store. You’ll be prompted to specify your existing key passwords and alias.
+* **Notifications**: If enabled, your PWA will use Android Notification Delegation for push notifications, meaning your installed PWA can send push notifications without browser permission prompts. You should enable this if your PWA sends push notifications.
+* **Notification delegation**: If enabled, your PWA can send push notifications without browser permission prompts.
+* **Location delegation**: If enabled, your PWA can access navigator.geolocation without browser permission prompts.
+* **Google Play billing**: If enabled, your PWA can sell in-app purchases and subscriptions via the Digital Goods API.
+* **Settings shortcut**: If enabled, users can long-press on your app tile and a Settings menu item will appear, letting users manage space for your app.
+* **ChromeOS only**: If enabled, your Android package will only run on ChromeOS devices.
+* **Include source code**: If enabled, your download will include the source code for your Android app.
+* **Signing key**: How the APK app package will be digitally signed:
+  - None: your app package won’t be signed. Unsigned packages will be signed by the Google Play Store. This is Google’s recommendation, and our default.
+  - New: PWABuilder will create a new signing key for you. The signing key will be included in your zip download. Choosing this will let you fill in details like password, alias, and more.
+  - Mine: Upload an existing .keystore file to use for signing the app package. This should be used if you are updating an existing app in the Store. You’ll be prompted to specify your existing key passwords and alias.
 
-## Testing and publishing your Android PWA to the Google Play Store
+## Test and publish
 * ### Deploy assetlinks.json
     - Your zip file contains assetlinks.json. This is a digital asset links file that proves ownership of your PWA. Upload this file to your server at https://example.com/.well-known/assetlinks.json. (Replace example.com with your PWA’s URL.) 
     - Digital asset links are required for your PWA on Android. If you’re seeing a browser address bar in your app on Android, or if your app is crashing on launch, it means your assetlinks.json file is missing, inaccessible, or incorrect. See our asset links helper to fix this.
@@ -75,7 +75,7 @@ The first step is to generate your Android package with PWABuilder.
     - Log into the [Google Play console](https://accounts.google.com/ServiceLogin?service=androiddeveloper&passive=true&continue=https%3A%2F%2Fplay.google.com%2Fconsole%2Fdeveloper%2F&_ga=2.66648750.1051416686.1651811327-1598367844.1601053784&_gac=1.56812888.1651811327.CjwKCAjw682TBhATEiwA9crl3yKK_grMWzVOA0JoU2P7-u8rnAIT0dEfclwuycEkxU5CK27UGzUZAhoC7McQAvD_BwE) with your developer account.
     - You can follow the guidelines on the Google play console to create your app. Don’t forget to choose the age range from 13+ or your app publishing request won’t be accepted.
     - Your zip file contains an .aab (Android App Bundle) file which can be submitted directly to the Play Store through the Google Play Console.
-* ### Update your [asset links file](https://blog.pwabuilder.com/Asset-links.md#validate-your-assetlinksjson-file) for production
+* ### Update your [ asset links file](https://blog.pwabuilder.com/Asset-links.md#validate-your-assetlinksjson-file) for production
     - This step is required for running the production version of your app. If you skip this step, your app will crash or a browser address bar will appear inside your app. 
     - Once you’ve uploaded your .aab file, Google Play re-signs your app. Because of this, you’ll need to update your asset links file.
     - Go to Google Play Console, select your app release then choose Setup -> App integrity, then copy your SHA-256 fingerprint.
